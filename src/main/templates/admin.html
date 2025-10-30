@@ -1,0 +1,15 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: body">
+<body>
+<h2>Admin dashboard</h2>
+<p>Total users: <span th:text="${userCount}"></span></p>
+<table>
+    <tr><th>ID</th><th>Username</th><th>Email</th><th>Name</th><th>Role</th></tr>
+    <tr th:each="u : ${users}">
+        <td th:text="${u.id}"></td>
+        <td th:text="${u.username}"></td>
+        <td th:text="${u.email}"></td>
+        <td th:text="${u.fullName}"></td>
+        <td th:text="${u.role}"></td>
+    </tr>
+</table>
+</body></html>
